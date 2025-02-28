@@ -47,7 +47,6 @@ li{
 li:hover {
     min-width: 0;
     background-color: rgb(76, 90, 112);
-    transition: all 0.7s ease;  
 }
 
 .nav_link {
@@ -70,7 +69,11 @@ li:hover {
     ul{
         height: 130px;
     }
-
+    
+    li:hover{
+        transition: all 0.7s ease;  
+    }
+    
     li:not(:first-child) {
         display: grid;
         grid-template-rows: 100% 0%;
