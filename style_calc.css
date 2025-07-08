@@ -1,0 +1,91 @@
+html, body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body{
+    background: rgb(187, 187, 187);
+    font-size: 62.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    width: 90vw;
+    height: 80vh;
+    max-width: 400px;
+    min-height: 450px;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 25% 75%;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#display {
+    overflow: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: block;
+    text-align: end;
+    line-height: 130px;
+    font-size: 3rem;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+#buttons{
+    padding-top: 15px;
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: rgb(98, 98, 109);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 40%;
+}
+
+button:hover:not(:first-child) {
+    cursor: pointer;
+    background-color: rgb(66, 66, 66);
+}
+
+button:active:not(:first-child) {
+    background-color: rgb(61, 61, 61);
+}
+
+.operator {
+    background-color: orange;
+}
+
+.operator:hover {
+    background-color: rgb(252, 176, 25);
+}
+
+.operator:active {
+    background-color: rgb(204, 141, 24);
+}
+
+#equal {
+    background-color: rgb(141, 140, 140);
+}
+
+#equal:hover {
+    background-color: rgb(116, 116, 116);
+}
+
+#equal:active {
+    background-color: rgb(98, 98, 109);
+}

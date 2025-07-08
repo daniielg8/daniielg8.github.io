@@ -1,53 +1,37 @@
-<!DOCTYPE html> 
-<html lang = eng>
+<!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" type="text/css"/>
-        <title>
-            Welcome!
-        </title>
+        <link href="style_calc.css" rel="stylesheet" type="text/css"/>
+        <title>Calculator</title>
     </head>
     <body>
-        <header>
-            <ul>
-                <li id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
-                <!-- <li id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li> -->
-                <li id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me"> Learn More</a></li>
-            </ul>
-        </header>
-        <main>
-            <div class = "container">
-                <h1>
-                    Hello, Welcome to My Website! 
-                </h1>
-                <div id = "information">
-                    <p> 
-                        <img id = "img1" src = "daniel-photo.jpg" 
-                        alt = "Portrait of Daniel Garcia"/>             
-                        My name is Daniel Arnulfo Garcia and I'm an aspiring software developer. 
-                        I enjoy expanding my knowledge in the world of computing and tackling real-world problems.
-                        I created this website with the purpose of putting my projects and myself out to the world.
-                        Also, to have some practice with HTML and CSS!
-                    </p>
-                </div> <!-- End of information id -->
+        <div id = container>
+            <div id="display">0</div>
+            <div id = "buttons">
+                <button></button>
+                <button type="button" onclick="clearDisplay()" id="clear">CE</button>
+                <button type="button" onclick="back()" id="back">C</button>
+                <button type="button" onclick="append('/')" class="operator">/</button>
+                <button type="button" onclick="append('7')" class="integer">7</button>
+                <button type="button" onclick="append('8')" class="integer">8</button>
+                <button type="button" onclick="append('9')" class="integer">9</button>
+                <button type="button" onclick="append('*')" class="operator">*</button>
+                <button type="button" onclick="append('4')" class="integer">4</button>
+                <button type="button" onclick="append('5')" class="integer">5</button>
+                <button type="button" onclick="append('6')" class="integer">6</button>
+                <button type="button" onclick="append('-')" class="operator">-</button>
+                <button type="button" onclick="append('1')" class="integer">1</button>
+                <button type="button" onclick="append('2')" class="integer">2</button>
+                <button type="button" onclick="append('3')" class="integer">3</button>
+                <button type="button" onclick="append('+')" class="operator">+</button>
+                <button type="button" onclick="sign()" id="sign">+/-</button>
+                <button type="button" onclick="append('0')" class="integer">0</button>
+                <button type="button" onclick="append('.')" id="float">.</button>
+                <button type="button" onclick="equal()" id="equal">=</button>
             </div>
-        </main>
-            <footer>  
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "mailto:oraadaniel8@gmail.com" target="_blank" title="Daniel's Email"> <img class = "imgAnimation" src = "mail_icon2.png" width = "55" height = "35" alt = "Email Icon"/> 
-                        <span class = "personal">Daniel's Email</span></a>
-                </div> 
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> <img class = "imgAnimation" src = "resume_sym.png" width = "55" height = "35" alt = "Resume Icon"/>
-                        <span class = "personal">Daniel's Resume </span></a>
-                </div>
-                <div id = "copy">
-                    <p>
-                        &#169; <em>2025 Daniel Garcia</em> 
-                    </p>
-                </div> 
-            </footer>
-        </main> 
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
