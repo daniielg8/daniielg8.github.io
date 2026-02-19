@@ -4,48 +4,67 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="Home-image.png" rel="Icon" type="image/png"/>
         <title>
-            About Daniel
+            Home Page
         </title>
+        <script src="to-top-button.js"></script>
     </head>
     <body>
-        <header>
-            <ul>
-                <li id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
-                <!-- <li id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li> -->
-                <li id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me"> Learn More</a></li>
-            </ul>
-        </header>
-        <main>
-            <div class = "container">
-                <h1>
-                    About Me 
-                </h1>
-                <div id = "information">
-                    <p> 
-                        I was born and raised in Reno, NV. Growing up, I found technology to be intriguing and interesting. 
-                        However, not until I attended TMCC would I find my true passion in the world of computing.
-                        My first programming language was Python, which is a great and easy language to learn programming fundamentals.
-                        Growing off of TMCC, I would transfer to UNR, where I learned C++ and OOP. I am currently a junior interested in software development and expanding my knowledge of computing.
-                    </p>
-                </div> <!-- End of information id -->
+        
+        <div class = "layout">
+            <button id = "top-button"><img src = "arrow-up-icon.png" height="40px" width="40px" alt = "Arrow pointing up indicating that the button brings you the top of the page"></button>
+            <header>
+                <ul class="nav-container">
+                    <li class = "nav-item" id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
+                    <li class = "nav-item" id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li>
+                    <li class = "nav-item" id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me">Learn More</a></li>
+                </ul>
+            </header>
+            <div id = "inner-wrapper">
+                <main>
+                    <div class = "container">
+                        <h1>
+                            About Me
+                        </h1>
+                        <div id = "mainText">    
+                            <div id = "content-block">
+                                <div id = "inner-content">
+                                    <img class = "cb-image"src = "oso.jpg" alt = "Handsome portrait of Oso" width="200px">
+                                    <div class = "cb-text">
+                                        <p class="cb-par"> 
+                                            My expertise includes embedded systems development, C/C++ programming, microcontroller programming, and circuit design. I also enjoy problem-solving, collaborating on projects, and learning new technologies.
+                                        </p>
+                                        <p class="cb-par"> 
+                                            Some of the stuff I like to do in my free time is watch UFC, play guitar, collect figures,
+                                            and listen to christian metal (Let me know if you know any bands!).
+                                        </p>
+                                        <p class="cb-par"> 
+                                            I'm always excited to connect with like-minded people, collaborate on projects, and take on new challenges. 
+                                            Feel free to check out my projects or get in touch with me!                                        
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>  
+                    <div class = "footer_item">
+                        <a class = "footer_hyperlink" href="mailto:danielagarcia@unr.edu" target="_blank" title="Daniel's Email"> <img class = "imgFooter" src = "mail_icon2.png" width = "30" height = "20" alt = "Email Icon"/> 
+                            <span class = "linkFooter">Daniel's Email</span></a>
+                    </div> 
+                    <div class = "footer_item">
+                        <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> <img class = "imgFooter" src = "resume_sym.png" width = "30" height = "25" alt = "Resume Icon"/>
+                            <span class = "linkFooter">Daniel's Resume </span></a>
+                    </div>
+                    <div id = "copy">
+                        <p>
+                            &#169; <em>2026 Daniel Garcia</em> 
+                        </p>
+                    </div> 
+                </footer>
             </div>
-        </main>
-            <footer>  
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "mailto:oraadaniel8@gmail.com" target="_blank" title="Daniel's Email"> <img class = "imgAnimation" src = "mail_icon2.png" width = "55" height = "35" alt = "Email Icon"/> 
-                        <span class = "personal">Daniel's Email</span></a>
-                </div> 
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> <img class = "imgAnimation" src = "resume_sym.png" width = "55" height = "35" alt = "Resume Icon"/>
-                        <span class = "personal">Daniel's Resume </span></a>
-                </div>
-                <div id = "copy">
-                    <p>
-                        &#169; <em>2025 Daniel Garcia</em> 
-                    </p>
-                </div> 
-            </footer>
-        </main> 
+        </div>
     </body>
 </html>

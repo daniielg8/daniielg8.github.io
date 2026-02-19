@@ -4,54 +4,61 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <link href="Home-image.png" rel="Icon" type="image/png"/>
         <title>
-            Welcome!
+            Home Page
         </title>
+        <script src="to-top-button.js"></script>
     </head>
     <body>
-        <header>
-            <ul>
-                <li id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
-                <li id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li>
-                <li id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me"> Learn More</a></li>
-            </ul>
-        </header>
-        <main>
-            <div class = "container">
-                <h1>
-                    hghghghg
-                </h1>
-                <div id = "information">
-                    <p>   
+        
+        <div class = "layout">
+            <button id = "top-button"><img src = "arrow-up-icon.png" height="40px" width="40px" alt = "Arrow pointing up indicating that the button brings you the top of the page"></button>
+            <header>
+                <ul class="nav-container">
+                    <li class = "nav-item" id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
+                    <li class = "nav-item" id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li>
+                    <li class = "nav-item" id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me">Learn More</a></li>
+                </ul>
+            </header>
+            <div id = "inner-wrapper">
+                <main>
+                    <div class = "container">
+                        <h1>
+                            Personal Projects
+                        </h1>
+                        <div id = "mainText">    
+                            <div id = "content-block">
+                                <div id = "inner-content">
+                                    <img class = "cb-image"src = "daniel-photo.jpg" alt = "Portrait of Daniel Garcia">
+                                    <div class = "cb-text">
+                                        <h2>Water evaporation cooler</h2>
+                                        <p class="cb-par"> 
+                                            My name is Daniel Arnulfo Garcia and I'm an aspiring software developer. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         
-                    </p>
-                </div> <!-- End of information id -->
+                        </div>
+                    </div>
+                </main>
+                <footer>  
+                    <div class = "footer_item">
+                        <a class = "footer_hyperlink" href = "mailto:oraadaniel8@gmail.com" target="_blank" title="Daniel's Email"> <img class = "imgFooter" src = "mail_icon2.png" width = "30" height = "20" alt = "Email Icon"/> 
+                            <span class = "linkFooter">Daniel's Email</span></a>
+                    </div> 
+                    <div class = "footer_item">
+                        <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> <img class = "imgFooter" src = "resume_sym.png" width = "30" height = "25" alt = "Resume Icon"/>
+                            <span class = "linkFooter">Daniel's Resume </span></a>
+                    </div>
+                    <div id = "copy">
+                        <p>
+                            &#169; <em>2026 Daniel Garcia</em> 
+                        </p>
+                    </div> 
+                </footer>
             </div>
-        </main>
-            <footer>  
-                <div id = "mail">
-                    <a href = "mailto:oraadaniel8@gmail.com" target="_blank" title="Daniel's Email"> 
-                        <img class = "imgAnimation" src = "mail_icon.jpg" width = "45" height = "50" alt = "Email Icon"/> 
-                    </a>
-                </div>
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "mailto:oraadaniel8@gmail.com" target="_blank" title="Daniel's Email"> Daniel's Email </a>
-                </div> 
-                <div id = "resume">
-                    <a href = "resume.pdf"  target="_blank" title = "Daniel's Resume">
-                        <img class = "imgAnimation" src = "resume_sym.png" width = "45" height = "35" alt = "Resume Icon"/>
-                    </a>
-                </div>
-                <div class = "footer_item">
-                    <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> Daniel's Resume </a>
-                </div>
-                <div id = "break"></div>
-                <div id = "copy">
-                    <p>
-                        &#169; <em>2025 Daniel Garcia</em> 
-                    </p>
-                </div> 
-            </footer>
-        </main> 
+        </div>
     </body>
 </html>
