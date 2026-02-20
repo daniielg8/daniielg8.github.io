@@ -3,6 +3,10 @@ CSS for Mywebsite
 */
 
 /* Top of page button */
+html {
+    color: #e8e6e3;
+}
+
 #top-button {
     z-index: 2;
     background-color: #4CAF50;    
@@ -39,7 +43,7 @@ body {
 }
 
 #inner-wrapper {
-    background-color: rgb(168, 168, 168);
+    background-color: #4e5457;
     border-radius: 10px;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -64,49 +68,6 @@ main, footer {
 header {
     flex-basis: 8rem;
 }
-
-/* Navigation */
-
-.nav-container {
-    box-shadow: 0px 3px 10px 2px rgb(56, 56, 56);
-    margin: 0ch;
-    display: flex;
-    flex-direction: row;
-    
-    height: 100%;
-    padding-left: 0px;
-    background-color: #8a8a8a;
-}
-
-.nav-item {
-    cursor: pointer; 
-    flex-grow: 1;
-    display: block;
-}
-
-.nav-item:hover {
-    min-width: 0;
-    background-color: rgb(57, 67, 85);
-    transition: all 0.7s ease;  
-}
-
-.nav_link {
-    text-underline-offset: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    font-size: 1.8rem;
-    min-height: 100%;
-    min-width: 100%;
-}
-
-.nav_link:hover{
-    text-underline-offset: 4px;
-    color: rgb(238, 238, 238);
-    transition: width .5s ease-in-out;
-}
-
 
 .container {
     display: flex;
@@ -143,7 +104,7 @@ a:visited {
 
 #content-block {
     flex-basis: 100%;
-    background-color: #8a8a8a;
+    background-color: #5a6265;
 }
 
 #inner-content, #inner-content-project {
@@ -179,15 +140,23 @@ a:visited {
     flex:1;
 }
 
+::marker {
+    color: #000000;
+}
+
 ul {
     margin: 0px;
 }
 
 
-h1 {
-    border-bottom: 3px solid rgb(0, 0, 0);;
-    padding-bottom: 20px;
+h1, h2, h3 {
+    border-bottom: 3px solid #8c8273;
+    padding-bottom: 15px;
     margin: 0px;
+    color:#f0e9dc;
+}
+
+h1 {
     font-size:  3rem;
     flex-basis: 0%;
 }
@@ -195,14 +164,10 @@ h1 {
 h2 {
     flex: 1;
     margin-top: 1rem;
-    border-bottom: #000000 solid;
-    padding-bottom: 0px;
-    margin: 0px;
     font-size: 2.5rem;    
 }
 
 h3 {
-    margin: 0;
     font-size: 2.1rem;
 }
 
@@ -232,20 +197,22 @@ footer {
     align-items: center;
     font-size: 1.5rem;
     padding-top: 1rem;
-    border-top: 3px solid rgb(0, 0, 0);
+    border-top: 3px solid #8c8273;
 }
 
 .footer_hyperlink {
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 0.8;
     transition: all 0.3s ease-out;
-    color: rgb(78, 78, 78);
+    color: #ffffff;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer_hyperlink:hover {    
     opacity: 1;
-    color: #000000;
-
 }
 
 .linkFooter {
@@ -262,13 +229,12 @@ footer {
 .footer_item{
     z-index: 1;
     height: 3rem;
-    mix-blend-mode: color-burn;
     flex-basis: 100%;
 }
 
 .imgFooter {
-    width: 1.5rem;
-    height: 1.2rem;
+    width: 2.2rem;
+    height: 1.9rem;
     padding-right: 0.5rem;
 }
 
@@ -301,6 +267,51 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgb(41, 41, 41); 
 }
 
+/* Navigation */
+
+.nav-container {
+    box-shadow: 0px 3px 10px 2px #383c3f;
+    margin: 0ch;
+    display: flex;
+    flex-direction: row;
+    
+    height: 100%;
+    padding-left: 0px;
+    background-color: #5a6265;
+}
+
+.nav-item {
+    cursor: pointer; 
+    flex-grow: 1;
+    display: block;
+}
+
+.nav-item:hover {
+    min-width: 0;
+    background-color: #4a5154;
+    transition: all 0.7s ease;  
+}
+
+.nav_link {
+    text-underline-offset: 4px;
+    display: flex;
+    color: #f0e9dc;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.nav_link:hover{
+    text-underline-offset: 4px;
+    transition: width .5s ease-in-out;
+}
+
+.nav-item::after {
+    transition: width 0.3s ease-in-out;
+}
+
 /* bigger screens */  
 @media screen and (min-width: 901px) {
 
@@ -325,7 +336,7 @@ body::-webkit-scrollbar-thumb:hover {
         width: 0%;
         height: 5px;
         transition: width 0.3s ease-in-out;
-        background: rgb(53, 64, 82);
+        background: #8c8273;
     }
     
     .nav-item:hover::after {
@@ -336,7 +347,7 @@ body::-webkit-scrollbar-thumb:hover {
         content: "";
         margin-top: 2rem;
         height: 50%;
-        border-right: 3px solid #000000;
+        border-right: 3px solid #8c8273;
     }
 
 }
@@ -368,10 +379,9 @@ body::-webkit-scrollbar-thumb:hover {
     .nav-item:not(:first-child)::before {
         content: "";
         display: block;
-        width: inherit;
         margin-left: 3rem;
         margin-right: 3rem;
-        border-bottom: 3px solid #000000;
+        border-bottom: 3px solid #8c8273;
     }
 
     #inner-content {
