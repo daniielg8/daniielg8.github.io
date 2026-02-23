@@ -14,8 +14,8 @@ html {
     width: 75px;
     padding: 0;
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 15px;
+    bottom: 15px;
     border-radius: 10px;
     opacity: 0;
     transition: 200ms;
@@ -115,8 +115,8 @@ a:visited {
 
 .cb-image {
     box-shadow: #000000 1px 2px 10px 1px;
-    width: 300px; /* or any width you want */
-    height: auto; /* keeps image proportion */
+    max-width: 50vw;
+    height: auto;
     margin-bottom: 1rem;
     margin-top: 0.9rem;
     margin-right: 1rem;
@@ -124,7 +124,8 @@ a:visited {
 
 .cb-image-project {
     box-shadow: #000000 1px 2px 10px 1px;
-    width: 400px; /* or any width you want */
+    max-width: 50vw;
+    height: auto;
     align-self: center;
 }
 
@@ -304,7 +305,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* bigger screens */  
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 801px) {
 
     .nav-item {
         display: grid;
@@ -345,7 +346,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* longer screens */
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 1200px) {
     html {
         font-size: x-large;
     }
@@ -353,7 +354,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 /* smaller screens */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
+
 
     .project-button {
         align-self: center;
@@ -387,5 +389,13 @@ body::-webkit-scrollbar-thumb:hover {
     .cb-image { 
         align-self: center;
         margin-bottom: 0rem;
+    }
+}
+
+/* Wide Screens */
+
+@media screen and (min-width: 1000px) {
+    .cb-image-project {
+        max-width: 30vw;
     }
 }
