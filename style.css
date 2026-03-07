@@ -4,28 +4,28 @@ CSS for Mywebsite
 
 /* Top of page button */
 html {
-    color: #e8e6e3;
+    color: #000000;
 }
 
 #top-button {
     z-index: 2;
     background-color: #4CAF50;    
-    height: 75px;
-    width: 75px;
+    height: 70px;
+    width: 70px;
     padding: 0;
     position: fixed;
     right: 15px;
     bottom: 15px;
     border-radius: 10px;
     opacity: 0;
-    transition: 200ms;
+    transition: 200ms ease;
     border: none;
+    box-shadow: #000000 1px 1px 5px 2px;
 }
 
 #top-button:hover {
-    cursor: pointer;
     border: #3b993e 3.5px solid;
-    transition: border 0.1s ease-in;
+    cursor: pointer;
 }
 
 /* Structure */
@@ -43,7 +43,7 @@ body {
 }
 
 #inner-wrapper {
-    background-color: #4e5457;
+    background-color: rgb(168, 168, 168);
     border-radius: 10px;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -85,6 +85,51 @@ a:visited {
     color: none ;
 }
 
+/* Navigation */
+
+.nav-container {
+    box-shadow: 0px 3px 10px 2px rgb(56, 56, 56);
+    margin: 0ch;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-left: 0px;
+    background-color:  rgb(190, 190, 190);
+}
+
+.nav-item {
+    cursor: pointer; 
+    flex-grow: 1;
+    display: block;
+}
+
+.nav-item:hover {
+    min-width: 0;
+    background-color: rgb(57, 67, 85);
+    transition: all 0.7s ease;  
+}
+
+.nav_link:hover{
+    text-underline-offset: 4px;
+    color: rgb(238, 238, 238);
+    transition: width .5s ease-in-out;
+}
+
+.nav_link {
+    text-underline-offset: 4px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.nav-item::after {
+    transition: width 0.3s ease-in-out;
+}
+
 /* MAIN TEXT */
 
 #mainText {
@@ -99,7 +144,7 @@ a:visited {
 
 #content-block {
     flex-basis: 100%;
-    background-color: #5a6265;
+    background-color:  rgb(190, 190, 190);
 }
 
 #inner-content, #inner-content-project {
@@ -115,41 +160,24 @@ a:visited {
 
 .cb-image {
     box-shadow: #000000 1px 2px 10px 1px;
-    max-width: 50vw;
+    max-width: 250px;
+    margin-right: 20px;
     height: auto;
-    margin-bottom: 1rem;
-    margin-top: 0.9rem;
-    margin-right: 1rem;
-}
-
-.cb-image-project {
-    box-shadow: #000000 1px 2px 10px 1px;
-    max-width: 50vw;
-    height: auto;
-    align-self: center;
+    float: left;
 }
 
 .cb-text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex:1;
-}
-
-::marker {
-    color: #000000;
+    display: block;
 }
 
 ul {
     margin: 0px;
 }
 
-
 h1, h2, h3 {
-    border-bottom: 3px solid #8c8273;
+    border-bottom: 3px solid rgb(0, 0, 0);;
     padding-bottom: 15px;
     margin: 0px;
-    color:#f0e9dc;
 }
 
 h1 {
@@ -158,8 +186,8 @@ h1 {
 }
 
 h2 {
+    overflow: hidden;
     flex: 1;
-    margin-top: 1rem;
     font-size: 2.5rem;    
 }
 
@@ -172,20 +200,24 @@ p {
 }
 
 .project-button {
-    padding: 15px;
+    display: block;
+    padding: 10px;
     text-align: center;
-    background-color: #444444;
+    background-color: #5c5c5c;
     color: #e4e4e4;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.2s ease;
+    transition: 0.5s ease;
     margin-top: 1rem;
     max-width: 30rem;
+    box-shadow: #000000 1px 2px 5px 1px;
+    border: 3.5px solid transparent;
+
 }
 
 .project-button:hover {
-    background-color: #555555; 
-    transform: scale(1.02);
+    background-color: #707070;
+    border: #5c5c5c solid;
 }
 
 /* Footer */
@@ -195,14 +227,14 @@ footer {
     align-items: center;
     font-size: 1.5rem;
     padding-top: 1rem;
-    border-top: 3px solid #8c8273;
+    border-top: 3px solid #000000;
 }
 
 .footer_hyperlink {
     text-decoration: none;
     opacity: 0.8;
     transition: all 0.3s ease-out;
-    color: #ffffff;
+    color: #000000;
 
     display: inline-flex;
     align-items: center;
@@ -216,7 +248,7 @@ footer {
 .linkFooter {
     text-decoration: underline;
     text-underline-offset: 5px;
-    vertical-align: 0.1rem;
+
 }
 
 .footer_hyperlink:hover .linkFooter {
@@ -232,7 +264,7 @@ footer {
 
 .imgFooter {
     width: 2.2rem;
-    height: 1.9rem;
+    height: 2.2rem;
     padding-right: 0.5rem;
 }
 
@@ -265,47 +297,12 @@ body::-webkit-scrollbar-thumb:hover {
     background: rgb(41, 41, 41); 
 }
 
-/* Navigation */
-
-.nav-container {
-    box-shadow: 0px 3px 10px 2px #383c3f;
-    margin: 0ch;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    padding-left: 0px;
-    background-color: #4a5154;
-}
-
-.nav-item {
-    cursor: pointer; 
-    flex-grow: 1;
-    display: block;
-}
-
-.nav-item:hover {
-    min-width: 0;
-    transition: .3s ease-in-out;
-    background-color: #5a6265;
-}
-
-.nav_link {
-    text-underline-offset: 4px;
-    display: flex;
-    color: #f0e9dc;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8rem;
-    min-height: 100%;
-    min-width: 100%;
-}
-
-.nav-item::after {
-    transition: width 0.3s ease-in-out;
-}
-
 /* bigger screens */  
 @media screen and (min-width: 801px) {
+
+    h3 {
+        margin-top: 1rem;
+    }
 
     .nav-item {
         display: grid;
@@ -328,7 +325,7 @@ body::-webkit-scrollbar-thumb:hover {
         width: 0%;
         height: 5px;
         transition: width 0.3s ease-in-out;
-        background: #8c8273;
+        background: rgb(53, 64, 82);
     }
     
     .nav-item:hover::after {
@@ -339,7 +336,7 @@ body::-webkit-scrollbar-thumb:hover {
         content: "";
         margin-top: 2rem;
         height: 50%;
-        border-right: 3px solid #8c8273;
+        border-right: 3px solid #000000;
         transition: width .5s ease-in-out; 
     }
 
@@ -356,6 +353,19 @@ body::-webkit-scrollbar-thumb:hover {
 /* smaller screens */
 @media screen and (max-width: 800px) {
 
+    .cb-image-project {
+        box-shadow: #000000 1px 2px 10px 1px;
+        max-width: 50vw;
+        height: auto;
+        align-self: center;
+    }
+
+    .cb-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex:1;
+    }
 
     .project-button {
         align-self: center;
@@ -379,7 +389,7 @@ body::-webkit-scrollbar-thumb:hover {
         display: block;
         margin-left: 3rem;
         margin-right: 3rem;
-        border-bottom: 3px solid #8c8273;
+        border-bottom: 3px solid #000000;
     }
 
     #inner-content {
@@ -393,9 +403,3 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Wide Screens */
-
-@media screen and (min-width: 1000px) {
-    .cb-image-project {
-        max-width: 30vw;
-    }
-}
