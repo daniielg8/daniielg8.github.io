@@ -15,16 +15,15 @@ html {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     opacity: 0;
     transition: 200ms;
-    border: #3b993e;
+    border: none;
 }
 
 #top-button:hover {
     cursor: pointer;
-    border: #3b993e 3.5px solid;
-    transition: border 0.1s ease-in;
+    background-color: rgb(69, 187, 73);    
 }
 
 /* Structure */
@@ -105,7 +104,7 @@ footer {
 /* button color */
 
 #top-button {
-    background-color: #4CAF50;    
+    background-color: #4fcc54;    
 }
 
 .project-button {
@@ -156,10 +155,6 @@ footer {
     font-size:  2rem;
     width: 100%;
     gap: 20px;
-}
-
-a {
-    font-size: 1.5rem;
 }
 
 a:hover {
