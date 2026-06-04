@@ -4,9 +4,9 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
-        <link href="gear.png" rel="Icon" type="image/png"/>
+        <link href="Home-image.png" rel="Icon" type="image/png"/>
         <title>
-            Person Projects
+            Home Page
         </title>
         <script src="to-top-button.js"></script>
     </head>
@@ -27,16 +27,18 @@
                         <h1>
                             Personal Projects
                         </h1>
-                        <div id = "mainText">    
-                            <div id = "content-block">
-                                <div id = "inner-content-project">
+                        <div class = "mainText">    
+                            <div class = "content-block">
+                                <div class = "inner-content-project">
+                                    <h2>Water Evaporation Cooler Control System</h2>
                                     <div class = "cb-text">
-                                        <img class = "cb-image"src = "water-cooler-schematic.jpg" alt = "Schematic layout of water cooler control system">
-                                        <h2>Water Evaporation Cooler Control System</h2>
+                                        <img class = "cb-image-project"src = "water-cooler-schematic.jpg" width="200px" alt = "Schematic layout of water cooler control system">
                                         <p> 
-                                           This project implements a fully functional water evaporation cooler control system using the Arduino Mega 2560 microcontroller. 
-                                           The system integrates multiple hardware components and communication protocols to monitor environmental conditions and control cooling operations automatically.
+                                        This project implements a fully functional water evaporation cooler control system using the Arduino Mega 2560 microcontroller. 
+                                        The system integrates multiple hardware components and communication protocols to monitor environmental conditions and control cooling operations automatically.
                                         </p>
+                                    </div>
+                                    <div class = "cb-text">
                                         <h3>
                                             Communication Protocols & Registers Used:
                                         </h3>
@@ -46,30 +48,30 @@
                                             <li>GPIO - Buttons, LEDs, motor control</li>
                                             <li>RTC integration - Timekeeping using the DS3231</li>
                                         </ul>
-                                        <a class = "project-button" href ="https://github.com/daniielg8/Arduino-Water-Cooler.git" target="_blank">Visit my Water Evaporation Cooler Project</a>
                                     </div>
+                                    <a class = "project-button" href ="https://github.com/daniielg8/Arduino-Water-Cooler.git" target="_blank">Visit my Water Evaporation Cooler Project</a>
                                 </div>
                             </div>
                         
                         </div>
                     </div>
                 </main>
-                <footer>  
-                    <div class = "footer_item">
-                        <a class = "footer_hyperlink" href = "mailto:danielagarcia@unr.edu" target="_blank" title="Daniel's Email"> <img class = "imgFooter" src = "mail.png" alt = "Email Icon"/> 
-                            <span class = "linkFooter">Daniel's Email</span></a>
-                    </div> 
-                    <div class = "footer_item">
-                        <a class = "footer_hyperlink" href = "Resume.pdf" target="_blank" title="Daniel's Resume"> <img class = "imgFooter" src = "document.png" alt = "Resume Icon"/>
-                            <span class = "linkFooter">Daniel's Resume </span></a>
-                    </div>
-                    <div id = "copy">
-                        <p>
-                            &#169; <em>2026 Daniel Garcia</em> 
-                        </p>
-                    </div> 
-                </footer>
             </div>
+            <footer>  
+                <div class = "footer_item">
+                    <a class = "footer_hyperlink" href="mailto:danielagarcia@unr.edu" target="_blank" title="Daniel's Email"> <img id = "imgMail" src = "mail-icon.png" alt = "Email Icon"/> 
+                        <span class = "linkFooter">Daniel's Email</span></a>
+                </div> 
+                <div class = "footer_item">
+                    <a class = "footer_hyperlink" href = "resume.pdf" target="_blank" title="Daniel's Resume"> <img id = "imgResume" src = "resume-icon.png" alt = "Resume Icon"/>
+                        <span class = "linkFooter">Daniel's Resume </span></a>
+                </div>
+                <div id = "copy">
+                    <p>
+                        &#169; <em>2026 Daniel Garcia</em> 
+                    </p>
+                </div> 
+            </footer>
         </div>
     </body>
 </html>
