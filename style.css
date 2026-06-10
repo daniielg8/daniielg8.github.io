@@ -53,11 +53,21 @@ body {
 main {
     flex: 1;
     display: flex;
-
 }
 
 header {
     flex-basis: 8.5rem;
+}
+
+main, header {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: 0.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0px);   
 }
 
 /* Shadows */
