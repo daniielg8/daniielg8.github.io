@@ -62,13 +62,18 @@ header {
 main, header {
     opacity: 0;
     transform: translateY(-100px);
-    transition: 0.5s ease;
 }
 
 .show {
+    transition: 0.5s ease;
     opacity: 1;
     transform: translateY(0px);   
 }
+
+.dropHide {
+    display: none;
+}
+
 
 /* Shadows */
 

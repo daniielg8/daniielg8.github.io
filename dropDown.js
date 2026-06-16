@@ -3,24 +3,30 @@ let isMobile = window.innerWidth <= 759;
 function updateNav() {
     const nav = document.querySelector("ul");
     const navContainer = document.querySelector("header");
-
+    
     if (!nav || !navContainer) return;
-
+        
     navContainer.classList.remove("show");
-    nav.classList.remove("dropHide", "dropShow", );
 
     if (window.innerWidth <= 759) {
+        
+        nav.classList.remove("nav-container");
         nav.classList.add("dropHide");
-    } else {
-        nav.classList.add("dropShow");
+        
+        
+    } else if (!document.querySelector("nav-container")){
+        nav.classList.add("nav-container");
+        nav.classList.remove("dropHide");
+        
     }
-
+    
     setTimeout(() => {
         navContainer.classList.add("show");
-    }, 75);
+    }, 250);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    
     updateNav();
 
     window.addEventListener("resize", () => {
