@@ -1,33 +1,44 @@
 let isMobile = window.innerWidth <= 759;
 
-function updateNav() {
+document.addEventListener("DOMContentLoaded", () => {
+
     const nav = document.querySelector("ul");
+    const menuBtn = document.querySelector(".nav-button");
     const navContainer = document.querySelector("header");
     
-    if (!nav || !navContainer) return;
-        
-    navContainer.classList.remove("show");
+    if (!nav || !navContainer || !menuBtn) return;
 
-    if (window.innerWidth <= 759) {
-        
-        nav.classList.remove("nav-container");
-        nav.classList.add("dropHide");
-        
-        
-    } else if (!document.querySelector("nav-container")){
-        nav.classList.add("nav-container");
-        nav.classList.remove("dropHide");
-        
+    function updateNav() {
+
+        navContainer.classList.remove("show");
+        nav.classList.remove("show");
+
+        if (window.innerWidth <= 759) {
+       
+            navContainer.classList.add("mobile")
+            
+        } else {
+            
+            navContainer.classList.remove("mobile")
+            nav.classList.add("show");
+
+            if(menuBtn.getElementsByClassName("active")){
+                menuBtn.classList.remove("active");
+            }
+
+        }
+
+        setTimeout(() => {
+            navContainer.classList.add("show");
+        }, 150);
     }
-    
-    setTimeout(() => {
-        navContainer.classList.add("show");
-    }, 250);
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-    
     updateNav();
+
+    menuBtn.addEventListener ("click", () => {
+        nav.classList.toggle("show");
+        menuBtn.classList.toggle("active");
+    })
 
     window.addEventListener("resize", () => {
         const nowMobile = window.innerWidth <= 759;
@@ -37,4 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
         isMobile = nowMobile;
         updateNav();
     });
-});
+
+    });

@@ -1,8 +1,7 @@
-
 // Executes once DOM content is fully loaded execute
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("top-button");
-    const trigger_heading = document.querySelector("#item3");
+    const trigger_heading = document.querySelector("h1");
     
     const observer = new IntersectionObserver((entries) =>{
         entries.forEach((entry) => {
