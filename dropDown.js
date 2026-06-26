@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector("ul");
     const menuBtn = document.querySelector(".nav-button");
     const navContainer = document.querySelector("header");
+    const mainBody =  document.querySelector("main");
     
     if (!nav || !navContainer || !menuBtn) return;
 
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         navContainer.classList.remove("show");
         nav.classList.remove("show");
+        mainBody.classList.remove("show")
 
         if (window.innerWidth <= 759) {
        
@@ -31,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             navContainer.classList.add("show");
         }, 150);
+
+        setTimeout(() => {
+            mainBody.classList.add("show")
+        }, 100);
     }
 
     updateNav();

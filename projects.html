@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html lang = eng>
-    <head>
+     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -9,16 +9,20 @@
             Home Page
         </title>
         <script src="to-top-button.js"></script>
-        <script src="animation.js"></script>
+        <script src="dropDown.js"></script>
     </head>
     <body>
-        
         <div class = "layout">
             <button id = "top-button"><img src = "arrow-up-icon.png" height="40px" width="40px" alt = "Arrow pointing up indicating that the button brings you the top of the page"></button>
             <header>
+                <button class = "nav-button" id = "menuBtn">
+                    <span class = "bar" id = "lineOne"></span>
+                    <span class = "bar" id = "lineTwo"></span>
+                    <span class = "bar" id = "lineThree"></span>
+                </button>
                 <ul class="nav-container">
-                    <li class = "nav-item" id = "item1"><a class = "nav_link" href ="index.html" title = "Home"> Home</a></li>
-                    <li class = "nav-item" id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects"> Personal Projects</a></li>
+                    <li class = "nav-item" id = "item1"><a class = "nav_link" href ="index.html" title = "Home">Home</a></li>
+                    <li class = "nav-item" id = "item2"><a class = "nav_link" href ="projects.html" title = "Daniel's Personal Projects">Personal Projects</a></li>
                     <li class = "nav-item" id = "item3"><a class = "nav_link" s href ="about.html" title = "Learn more about me">Learn More</a></li>
                 </ul>
             </header>

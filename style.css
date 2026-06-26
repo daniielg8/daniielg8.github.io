@@ -56,7 +56,8 @@ main {
 }
 
 header {
-    flex-basis: 8.5rem;
+    flex-basis: 13rem;
+    display: flex;
 }
 
 main, header {
@@ -71,13 +72,33 @@ main, header {
 }
 
 .nav-container.show {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+
+}
+
+.nav-container {
     display: flex;
+    flex: 1;
+    margin: 0ch;
+    flex-direction: row;
+    max-height: 0;
+    padding-left: 0px;
+    background-color: rgb(55, 65, 85);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+header.mobile, .nav-container {
+    background-color: rgb(36, 44, 59);
 }
 
 header.mobile {
     display: flex;
     flex-direction: column;
-    flex-basis: 2rem;
+    flex-basis: 3rem;
 }
 
 .nav-button {
@@ -94,22 +115,18 @@ header.mobile {
     cursor: pointer;
 }
 
-.nav-button.hide {
-    display: none;
-}
-
 .bar {
     display: block;
     width: 100%;
-    height: 3px;
-    background-color: black;
+    height: 4px;
+    background-color: #eeeeee;
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
 }
 
 .nav-button.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 8px);
+    transform: rotate(45deg) translate(6px, 8px);
 }
 
 .nav-button.active .bar:nth-child(2) {
@@ -117,7 +134,7 @@ header.mobile {
 }
 
 .nav-button.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -11px);
+    transform: rotate(-45deg) translate(9px, -11px);
 }
 /* Shadows */
 
@@ -131,8 +148,8 @@ header.mobile {
     float: left;
     max-width: 100%; /* or any width you want */
     height: auto; /* keeps image proportion */
-    margin-top: 0.9rem;
-    margin-right: 1rem;
+    margin-top: 0.6rem;
+    margin-right: 1.5rem;
 }
 
 /* hyperlinks */
@@ -144,9 +161,6 @@ header.mobile {
 
 /* footer and Nav color */
 
-.nav-container {
-    background-color: rgb(36, 44, 59);
-}
 
 footer { 
     background: linear-gradient(rgba(36, 44, 59, 0.9), rgba(36, 44, 59, 0.9)), url("footer-image.jpeg");
@@ -176,14 +190,6 @@ footer {
 
 /* Navigation */
 
-.nav-container {
-    margin: 0ch;
-    display: none;
-    flex-direction: row;
-    
-    height: 100%;
-    padding-left: 0px;
-}
 
 .nav-item {
     cursor: pointer; 
@@ -290,7 +296,7 @@ h3 {
 }
 
 p {
-    margin: 0.5rem;
+    margin: 1rem;
 }
 
 .project-button {
@@ -423,7 +429,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     .nav-item:not(:first-child)::before {
         content: "";
-        margin-top: 2.5rem;
+        margin-top: 3.5rem;
         height: 50%;
         border-right: 3px solid #000000;
     }
@@ -454,6 +460,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     .nav-container {
         flex-direction: column;
+        background-color: rgb(55, 65, 85);
     }
     
     .nav_link {
