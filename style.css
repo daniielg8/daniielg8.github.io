@@ -53,16 +53,92 @@ body {
 main {
     flex: 1;
     display: flex;
-
 }
 
 header {
-    flex-basis: 8.5rem;
+    flex-basis: 13rem;
+    display: flex;
 }
 
+main, header {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.show {
+    transition: 0.5s ease;
+    opacity: 1;
+    transform: translateY(0px);   
+}
+
+.nav-container.show {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+
+}
+
+.nav-container {
+    display: flex;
+    flex: 1;
+    margin: 0ch;
+    flex-direction: row;
+    max-height: 0;
+    padding-left: 0px;
+    background-color: rgb(55, 65, 85);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+header.mobile, .nav-container {
+    background-color: rgb(36, 44, 59);
+}
+
+header.mobile {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 3rem;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 2rem;
+    align-self: self-end;
+    gap: 8px;
+    padding: 6px;
+    margin: 2rem;
+    width: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-button.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 8px);
+}
+
+.nav-button.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-button.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -11px);
+}
 /* Shadows */
 
-.content-block, .cb-image, .cb-image-project, footer, .nav-container {
+.content-block, .cb-image, .cb-image-project, footer, header {
     box-shadow: 0 6px 18px 8px rgba(0,0,0,0.15);   
 }
 
@@ -72,8 +148,8 @@ header {
     float: left;
     max-width: 100%; /* or any width you want */
     height: auto; /* keeps image proportion */
-    margin-top: 0.9rem;
-    margin-right: 1rem;
+    margin-top: 0.6rem;
+    margin-right: 1.5rem;
 }
 
 /* hyperlinks */
@@ -85,9 +161,6 @@ header {
 
 /* footer and Nav color */
 
-.nav-container {
-    background-color: rgb(36, 44, 59);
-}
 
 footer { 
     background: linear-gradient(rgba(36, 44, 59, 0.9), rgba(36, 44, 59, 0.9)), url("footer-image.jpeg");
@@ -117,14 +190,6 @@ footer {
 
 /* Navigation */
 
-.nav-container {
-    margin: 0ch;
-    display: flex;
-    flex-direction: row;
-    
-    height: 100%;
-    padding-left: 0px;
-}
 
 .nav-item {
     cursor: pointer; 
@@ -231,7 +296,7 @@ h3 {
 }
 
 p {
-    margin: 0.5rem;
+    margin: 1rem;
 }
 
 .project-button {
@@ -341,6 +406,9 @@ body::-webkit-scrollbar-thumb:hover {
         grid-template-columns: 100%
     }
 
+    .nav-button {
+        display: none;
+    }
 
     #item2::after, #item3::after {
         grid-column: span 2;
@@ -361,7 +429,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     .nav-item:not(:first-child)::before {
         content: "";
-        margin-top: 2.5rem;
+        margin-top: 3.5rem;
         height: 50%;
         border-right: 3px solid #000000;
     }
@@ -391,8 +459,8 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     .nav-container {
-        display: flex;
         flex-direction: column;
+        background-color: rgb(55, 65, 85);
     }
     
     .nav_link {
